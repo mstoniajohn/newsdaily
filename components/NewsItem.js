@@ -1,6 +1,7 @@
 import styles from '../styles/Home.module.css';
 
 import moment from 'moment';
+
 export default function NewsItem({ news }) {
 	const timestamp = moment(news.date).format('MMMM Do YYYY, h:mm:ss a');
 	return (
