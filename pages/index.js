@@ -5,7 +5,6 @@ import styles from '../styles/Home.module.css';
 import { useState } from 'react';
 
 export default function Home({ data }) {
-	const [readMore, setReadMore] = useState(false);
 	console.log(data);
 	return (
 		<Layout className={styles.container}>
@@ -23,7 +22,7 @@ export default function Home({ data }) {
 }
 export async function getServerSideProps() {
 	const res = await fetch(
-		'https://newsapi.org/v2/top-headlines?country=us&apiKey=b1361012dfaa415bba12852df1dc31aa'
+		`https://newsapi.org/v2/top-headlines?country=us&apiKey=b1361012dfaa415bba12852df1dc31aa`
 	);
 	const data = await res.json();
 	console.log(data);
