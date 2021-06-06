@@ -1,11 +1,14 @@
 import Link from 'next/link';
 import styles from '../styles/Header.module.css';
 import Search from './Search';
+import { FaNewspaper } from 'react-icons/fa';
 export default function Header() {
 	return (
 		<header className={styles.header}>
 			<Link href="/">
-				<a className={styles.h1}>Home</a>
+				<a className={styles.h1}>
+					<FaNewspaper />
+				</a>
 			</Link>
 			<Search />
 

@@ -1,4 +1,5 @@
 import NewsItem from '@/components/NewsItem';
+import moment from 'moment';
 
 import Layout from '../components/Layout';
 import styles from '../styles/Home.module.css';
@@ -7,7 +8,10 @@ export default function Home({ data }) {
 	console.log(data);
 	return (
 		<Layout>
-			<h1 className="text-3xl font-bold mb-9">Your latest news</h1>
+			<h1 className="text-3xl font-bold mb-9 blue-color">
+				Today's top stories for{' '}
+				{moment(new Date().toLocaleDateString()).format('MMMM Do YYYY')}
+			</h1>
 
 			{/* <p className={styles.description}>description</p> */}
 
