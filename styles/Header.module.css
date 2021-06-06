@@ -1,0 +1,35 @@
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem;
+}
+.h1 {
+	font-size: 2rem;
+	/* margin-right: auto; */
+	color: rgb(64, 199, 154);
+}
+.header ul {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 2rem;
+	color: rgb(64, 199, 154);
+}
+.header ul li a:hover {
+	border-bottom: 3px solid rgba(64, 199, 154, 0.705);
+	margin-bottom: 1rem;
+	color: rgba(64, 199, 154, 0.705);
+}
+
+@media screen and (max-width: 600px) {
+	.header {
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	.h1 {
+		text-align: center;
+		margin: auto;
+		margin-bottom: 1rem;
+	}
+}
