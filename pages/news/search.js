@@ -8,9 +8,15 @@ export default function searchNews({ data }) {
 	const router = useRouter();
 	return (
 		<Layout title="Search Results">
-			<Link href="/news">Go Back</Link>
-			<h1>Search Results for {router.query.term}</h1>
-			{data.length === 0 && <h2>No events</h2>}
+			<Link href="/">
+				<a className="btn ">
+					<span>{'<'}</span> Go Back
+				</a>
+			</Link>
+			<h1 className="text-3xl font-bold mb-9 mt-4 blue-color">
+				Search Results for {router.query.term}
+			</h1>
+			{data.length === 0 && <h2 className="text-xl">No articles found.</h2>}
 			<div className="grid md:grid-cols-4 gap-8">
 				{data.map((art) => (
 					<NewsItem key={art.id} news={art} />

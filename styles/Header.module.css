@@ -7,18 +7,19 @@
 .h1 {
 	font-size: 2rem;
 	/* margin-right: auto; */
-	color: rgb(64, 199, 154);
+	color: #d93a2b;
 }
 .header ul {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 2rem;
-	color: rgb(64, 199, 154);
+	color: #d93a2b;
 }
 .header ul li a:hover {
-	border-bottom: 3px solid rgba(64, 199, 154, 0.705);
+	border-bottom: 3px solid #d9caad;
 	margin-bottom: 1rem;
-	color: rgba(64, 199, 154, 0.705);
+	color: #d9caad;
+	/* color: rgba(64, 199, 154, 0.705); */
 }
 
 @media screen and (max-width: 600px) {

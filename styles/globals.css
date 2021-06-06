@@ -17,3 +17,57 @@ a {
 * {
 	box-sizing: border-box;
 }
+a {
+	text-decoration: none;
+}
+
+.btn {
+	display: inline-block;
+	background: #243040;
+	/* background: #173e43; */
+	color: #fff;
+	padding: 10px 20px;
+	cursor: pointer;
+	border: 0;
+	border-radius: 5px;
+}
+.blue-color {
+	color: #243040;
+}
+.yellow-color {
+	color: #d9caad;
+}
+
+.btn:hover {
+	opacity: 0.9;
+}
+.pin-color {
+	color: blueviolet;
+	font-size: 2rem;
+}
+
+.btn-secondary {
+	font: inherit;
+	font-size: 13px;
+	background: #243040;
+	color: #fff !important;
+	border: 0;
+	border-radius: 5px;
+	padding: 5px 15px;
+	margin: 0 20px;
+	cursor: pointer;
+}
+
+.btn-secondary:hover {
+	opacity: 0.8;
+}
+
+.btn-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.btn-icon svg {
+	margin-right: 5px;
+}

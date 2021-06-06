@@ -9,26 +9,26 @@ export default function Header() {
 			</Link>
 			<Search />
 
-			<div>
+			<div className="mt-4 mb-0">
 				<ul>
 					<li>
-						<Link href="/news">
-							<a>News</a>
+						<Link href="/">
+							<a>Top News</a>
 						</Link>
 					</li>
 					<li>
-						<Link href="/news/search">
-							<a>Search </a>
+						<Link href="/news/search?term=covid">
+							<a>Covid-19</a>
 						</Link>
 					</li>
 					<li>
-						<Link href="/news">
-							<a>News</a>
+						<Link href="/news/search?term=music">
+							<a>Music</a>
 						</Link>
 					</li>
 					<li>
-						<Link href="/news">
-							<a>News</a>
+						<Link href="/news/search?term=travel">
+							<a>Travel</a>
 						</Link>
 					</li>
 				</ul>
