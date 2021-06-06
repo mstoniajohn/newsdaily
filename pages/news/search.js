@@ -21,12 +21,12 @@ export default function searchNews({ data }) {
 }
 
 export async function getServerSideProps({ query: { term } }) {
-	const query = qs.stringify({
+	const queryS = qs.stringify({
 		_where: {
 			_or: [
 				{ title_contains: term },
 				{ author_contains: term },
-				{ content_contains: term },
+				{ description_contains: term },
 			],
 		},
 	});

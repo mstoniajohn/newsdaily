@@ -29,3 +29,6 @@ export default function Layout({ title, description, children, keywords }) {
 		</div>
 	);
 }
+Layout.defaultProps = {
+	title: 'News Daily',
+};

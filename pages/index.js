@@ -6,10 +6,10 @@ import styles from '../styles/Home.module.css';
 export default function Home({ data }) {
 	console.log(data);
 	return (
-		<Layout className={styles.container}>
-			<h1 className={styles.title}>Your latest news</h1>
+		<Layout>
+			<h1 className="text-3xl font-bold mb-9">Your latest news</h1>
 
-			<p className={styles.description}>description</p>
+			{/* <p className={styles.description}>description</p> */}
 
 			<div className="grid md:grid-cols-4 gap-8">
 				{data.map((news, i) => (
