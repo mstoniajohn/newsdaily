@@ -3,14 +3,17 @@ import qs from 'qs';
 import { useRouter } from 'next/router';
 import NewsItem from '@/components/NewsItem';
 import Link from 'next/link';
+import { TiArrowBackOutline } from 'react-icons/ti';
 export default function searchNews({ data }) {
 	console.log(data);
 	const router = useRouter();
 	return (
 		<Layout title="Search Results">
 			<Link href="/">
-				<a className="btn ">
-					<span>{'<'}</span> Go Back
+				<a className="btn">
+					<span className="text-2xl">
+						<TiArrowBackOutline />
+					</span>
 				</a>
 			</Link>
 			<h1 className="text-3xl font-bold mb-9 mt-4 blue-color">
