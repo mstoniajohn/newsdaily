@@ -29,7 +29,7 @@ export default function searchNews({ data }) {
 	);
 }
 
-export async function getServerSideProps({ query: { term } }) {
+export async function getStaticProps({ query: { term } }) {
 	// const queryS = qs.stringify({
 	// 	_where: {
 	// 		_or: [
