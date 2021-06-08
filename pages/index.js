@@ -20,7 +20,7 @@ export default function Home({ data }) {
 		</Layout>
 	);
 }
-export async function getStaticProps() {
+export async function getServerSideProps() {
 	const res = await fetch(
 		`https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.NEXT_PUBLIC_NEWS_API_KEY}`
 	);
