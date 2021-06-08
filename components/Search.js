@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
-import styles from '../styles/Search.module.css';
+// import styles from '../styles/Search.module.css';
 import { FaSearch } from 'react-icons/fa';
 
 export default function Search() {
