@@ -8,7 +8,7 @@ export default function searchNews({ data }) {
 	console.log(data);
 	const router = useRouter();
 	return (
-		<Layout title="Search Results">
+		<Layout title="Search News">
 			<Link href="/">
 				<a className="btn">
 					<span className="text-2xl">

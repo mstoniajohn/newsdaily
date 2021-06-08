@@ -1,19 +1,16 @@
 import NewsItem from '@/components/NewsItem';
 import moment from 'moment';
-
-import Layout from '../components/Layout';
 import styles from '../styles/Home.module.css';
+import Layout from '../components/Layout';
 
 export default function Home({ data }) {
-	console.log(data);
+	console.log(data[0].publishedAt);
 	return (
-		<Layout>
+		<Layout title="News Daily">
 			<h1 className="text-3xl font-bold mb-9 blue-color">
-				Today's top stories for{' '}
-				{moment(new Date().toLocaleDateString()).format('MMMM Do YYYY')}
+				Today's top stories
+				{/* {moment(data[0].publishedAt).format('MMMM Do')} */}
 			</h1>
-
-			{/* <p className={styles.description}>description</p> */}
 
 			<div className="grid md:grid-cols-4 gap-8">
 				{data.map((news, i) => (

@@ -4,19 +4,21 @@ import Search from './Search';
 import { FaNewspaper } from 'react-icons/fa';
 export default function Header() {
 	return (
-		<header className={styles.header}>
-			<Link href="/">
-				<a className={styles.h1}>
-					<FaNewspaper />
-				</a>
-			</Link>
-			<Search />
+		<header className="flex flex-col items-center justify-center mt-4 md:flex-row md:justify-evenly p-2">
+			<h1 className="mr-auto">
+				<Link href="/">
+					<a className={styles.h1}>
+						<FaNewspaper />
+					</a>
+				</Link>
+			</h1>
+			<Search className="text-blue" />
 
-			<div className="mt-4 mb-0">
-				<ul>
+			<div className="mt-4 mb-0 md:ml-auto">
+				<ul className="md:grid md:grid-cols-3 items-center gap-3 flex justify-center">
 					<li>
 						<Link href="/news/search?term=covid">
-							<a>Covid-19</a>
+							<a>Covid</a>
 						</Link>
 					</li>
 
