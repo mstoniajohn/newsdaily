@@ -13,7 +13,13 @@ export default function Layout({ title, description, children, keywords }) {
 				<meta name="keywords" content={keywords} />
 			</Head>
 			<Header />
-			<main className={styles.main}>{children}</main>
+			<div className="w-screen sm:flex mt-4">
+				<aside className="sm:w-1/4 w-full">
+					<h2 className="text-center">COntent</h2>
+				</aside>
+				<main className="sm:w-3/4 w-full">{children}</main>
+			</div>
+
 			<footer className={styles.footer}>
 				<a
 					href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"

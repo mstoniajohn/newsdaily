@@ -12,7 +12,7 @@ export default function Home({ data }) {
 				{/* {moment(data[0].publishedAt).format('MMMM Do')} */}
 			</h1>
 
-			<div className="grid md:grid-cols-4 gap-8">
+			<div className="grid md:grid-cols-3 gap-8">
 				{data.map((news, i) => (
 					<NewsItem key={i} news={news} />
 				))}
