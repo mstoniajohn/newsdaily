@@ -16,14 +16,14 @@ export default function Search() {
 		<div className=" relative">
 			<form onSubmit={handleSubmit}>
 				<input
-					className="rounded focus:border-none border-solid border-2 border-light-blue-500"
+					className="rounded-md border-b-2 focus:outline-none border-solid border-blue-100"
 					type="text"
 					name="term"
 					value={term}
 					onChange={(e) => setTerm(e.target.value)}
 					placeholder="Search news…"
 				/>
-				<FaSearch className="absolute top-1 right-0 bg-light-blue-500" />
+				<FaSearch className="absolute bottom-1 right-1 text-blue-100" />
 			</form>
 		</div>
 	);
