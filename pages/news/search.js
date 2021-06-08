@@ -21,8 +21,8 @@ export default function searchNews({ data }) {
 			</h1>
 			{data.length === 0 && <h2 className="text-xl">No articles found.</h2>}
 			<div className="grid md:grid-cols-4 gap-8">
-				{data.map((art) => (
-					<NewsItem key={art.id} news={art} />
+				{data.map((art, i) => (
+					<NewsItem key={i} news={art} />
 				))}
 			</div>
 		</Layout>
