@@ -25,7 +25,7 @@ export default function Home({ data }) {
 }
 export async function getServerSideProps() {
 	const res = await fetch(
-		`https://newsapi.org/v2/top-headlines?country=us&apiKey=9944f76533ad43bca768881745ba21d8`
+		`https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.NEWS_API_KEY}`
 	);
 	const data = await res.json();
 

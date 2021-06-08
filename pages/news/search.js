@@ -41,12 +41,9 @@ export async function getServerSideProps({ query: { term } }) {
 	});
 	// const query = 'bitcoin';
 	const res = await fetch(
-		`https://newsapi.org/v2/everything?q=${term}&language=en&sortBy=popularity&apiKey=b1361012dfaa415bba12852df1dc31aa`
+		`https://newsapi.org/v2/everything?q=${term}&language=en&sortBy=popularity&apiKey=${process.env.NEWS_API_KEY}`
 	);
 
-	// const contRes = await fetch(
-	// 	`https://newsapi.org/v2/top-headlines?country=${query}&apiKey=b1361012dfaa415bba12852df1dc31aa`
-	// );
 	const data = await res.json();
 	console.log(data);
 
