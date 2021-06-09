@@ -10,15 +10,13 @@ export default function searchNews({ data }) {
 	return (
 		<Layout title="Search News">
 			<Link href="/">
-				<a className="btn">
-					<span className="text-2xl">
-						<TiArrowBackOutline />
-					</span>
+				<a className="text-2xl text-red-400 text-center ml-auto mr-auto">
+					<TiArrowBackOutline className="text-2xl" />
 				</a>
 			</Link>
-			<h1 className="text-3xl font-bold mb-9 mt-4 blue-color">
+			<h2 className="text-2xl font-bold mb-9 mt-4 text-gray-400 text-center">
 				Search Results for {router.query?.term}
-			</h1>
+			</h2>
 			{data?.length === 0 && <h2 className="text-xl">No articles found.</h2>}
 			<div className="grid md:grid-cols-3 gap-8">
 				{data && data?.map((art, i) => <NewsItem key={i} news={art} />)}

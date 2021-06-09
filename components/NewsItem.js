@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function NewsItem({ news }) {
 	// const timestamp = ;
 	return (
-		<div className="cursor-pointer shadow border p-1 rounded border-gray-200">
+		<div className="cursor-pointer shadow border p-1 rounded border-gray-200 transition duration-500 ease-in-out hover:border-red-300 transform hover:-translate-y-1 hover:scale-105 drop-shadow-sm">
 			<Link className="" href={news?.url}>
 				<a className="no-underline">
 					<div className="flex justify-between">

@@ -7,7 +7,7 @@ export default function Home({ data }) {
 	console.log(data[0].publishedAt);
 	return (
 		<Layout title="News Daily">
-			<h1 className="text-3xl font-bold mb-9 blue-color">
+			<h1 className="text-2xl text-center font-bold mb-9 text-gray-400">
 				Today's top stories
 				{/* {moment(data[0].publishedAt).format('MMMM Do')} */}
 			</h1>
