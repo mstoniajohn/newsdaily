@@ -1,24 +1,26 @@
 import styles from '../styles/Home.module.css';
 import { CgExternal } from 'react-icons/cg';
-// import moment from 'moment';
+import moment from 'moment';
 import Link from 'next/link';
 
 export default function NewsItem({ news }) {
 	// const timestamp = ;
 	return (
-		<div className={styles.card}>
-			<Link href={news?.url}>
-				<a>
+		<div className="cursor-pointer shadow border p-1 rounded border-gray-200">
+			<Link className="" href={news?.url}>
+				<a className="no-underline">
 					<div className="flex justify-between">
 						<small className="mr-1 font-bold">{news?.source.name}</small>
-						{/* <small className="font-bold">
+						<small className="font-bold">
 							{moment(news.date).format('MMMM Do YYYY, h:mm:ss a')}
-						</small> */}
+						</small>
 					</div>
 					<img
+						className="w-full object-cover "
 						src={news?.urlToImage ? news?.urlToImage : '/images/default.jpg'}
 						height={300}
 						width={400}
+						loading="lazy"
 					/>
 
 					<div className="p-1">

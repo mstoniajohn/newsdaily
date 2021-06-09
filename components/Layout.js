@@ -13,11 +13,11 @@ export default function Layout({ title, description, children, keywords }) {
 				<meta name="keywords" content={keywords} />
 			</Head>
 			<Header />
-			<div className="w-screen sm:flex mt-4">
+			<div className="w-screen sm:flex mt-4 sm:wrap-reverse">
+				<main className="sm:w-3/4 w-full p-2">{children}</main>
 				<aside className="sm:w-1/4 w-full">
 					<h2 className="text-center">COntent</h2>
 				</aside>
-				<main className="sm:w-3/4 w-full">{children}</main>
 			</div>
 
 			<footer className={styles.footer}>

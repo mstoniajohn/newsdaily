@@ -27,16 +27,17 @@ export default function searchNews({ data }) {
 	);
 }
 
-export const getServeSideProps = async ({ query: { term = 'bitcoin' } }) => {
+export const getServeSideProps = async ({ query: { term } }) => {
 	const res = await fetch(
-		`https://newsapi.org/v2/everything?q=${term}&language=en&sortBy=popularity&apiKey=${process.env.NEXT_PUBLIC_NEWS_API_KEY}`
+		`https://newsapi.org/v2/everything?q=${term}&language=en&apiKey=${process.env.NEXT_PUBLIC_NEWS_API_KEY}`
 	);
+	console.log(res);
 
-	const data = await res?.json();
+	const data = await res.json();
 
 	return {
 		props: {
-			data: data?.articles,
+			data: data.articles,
 		},
 	};
 };
