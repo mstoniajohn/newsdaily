@@ -4,7 +4,7 @@ import NewsItem from '@/components/NewsItem';
 import Layout from '../components/Layout';
 
 export default function Home({ data }) {
-	// console.log(data[0].publishedAt);
+	console.log(data[0].publishedAt);
 	return (
 		<Layout title="News Daily">
 			<h1 className="text-3xl font-bold mb-9 blue-color">
