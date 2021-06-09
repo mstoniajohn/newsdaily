@@ -32,6 +32,11 @@ export const getServeSideProps = async ({ query: { term } }) => {
 	console.log(res);
 
 	const data = await res.json();
+	if (!data) {
+		return {
+			notFound: true,
+		};
+	}
 
 	return {
 		props: {
