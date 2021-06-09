@@ -27,7 +27,7 @@ export default function searchNews({ data }) {
 	);
 }
 
-export const getStaticProps = async ({ query: { term = 'bitcoin' } }) => {
+export const getServeSideProps = async ({ query: { term = 'bitcoin' } }) => {
 	const res = await fetch(
 		`https://newsapi.org/v2/everything?q=${term}&language=en&sortBy=popularity&apiKey=${process.env.NEXT_PUBLIC_NEWS_API_KEY}`
 	);
