@@ -19,7 +19,7 @@ export default function searchNews({ data }) {
 			<h1 className="text-3xl font-bold mb-9 mt-4 blue-color">
 				Search Results for {router.query?.term}
 			</h1>
-			{data>.length === 0 && <h2 className="text-xl">No articles found.</h2>}
+			{data?.length === 0 && <h2 className="text-xl">No articles found.</h2>}
 			<div className="grid md:grid-cols-3 gap-8">
 				{data && data?.map((art, i) => <NewsItem key={i} news={art} />)}
 			</div>
