@@ -27,7 +27,7 @@ export default function searchNews({ data }) {
 	);
 }
 
-export const getStaticProps = async ({ query: { term } }) => {
+export const getStaticProps = async ({ query: { term = 'bitcoin' } }) => {
 	// const queryS = qs.stringify({
 	// 	_where: {
 	// 		_or: [
@@ -39,11 +39,7 @@ export const getStaticProps = async ({ query: { term } }) => {
 	// });
 	// const query = 'bitcoin';
 	const res = await fetch(
-		`https://newsapi.org/v2/everything?q=${
-			term ? term : 'bitcoin'
-		}&language=en&sortBy=popularity&apiKey=${
-			process.env.NEXT_PUBLIC_NEWS_API_KEY
-		}`
+		`https://newsapi.org/v2/everything?q=${term}&language=en&sortBy=popularity&apiKey=${process.env.NEXT_PUBLIC_NEWS_API_KEY}`
 	);
 
 	const data = await res.json();

@@ -22,12 +22,12 @@ export async function getStaticProps() {
 	const res = await fetch(
 		`https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.NEXT_PUBLIC_NEWS_API_KEY}`
 	);
-	const data = await res.json();
+	const data = await res?.json();
 
 	// console.log(data);
 	return {
 		props: {
-			data: data.articles,
+			data: data?.articles,
 		},
 	};
 }
