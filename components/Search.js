@@ -13,7 +13,7 @@ export default function Search() {
 		setTerm('');
 	};
 	return (
-		<div className=" relative">
+		<div className="relative">
 			<form onSubmit={handleSubmit}>
 				<input
 					className="rounded-md border-b-2 focus:outline-none border-solid border-blue-100"
@@ -23,7 +23,9 @@ export default function Search() {
 					onChange={(e) => setTerm(e.target.value)}
 					placeholder="Search news…"
 				/>
-				<FaSearch className="absolute bottom-1 right-1 text-blue-100" />
+				<button type="submit" className="absolute top-2 right-1 text-blue-100">
+					<FaSearch className="cursor-pointer" />
+				</button>
 			</form>
 		</div>
 	);

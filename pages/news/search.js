@@ -25,13 +25,14 @@ export default function searchNews({ data }) {
 	);
 }
 
-export const getServeSideProps = async ({ query: { term } }) => {
+export async function getServeSideProps({ query: { term } }) {
+	console.log(term);
 	const res = await fetch(
 		`https://newsapi.org/v2/everything?q=${term}&language=en&apiKey=${process.env.NEXT_PUBLIC_NEWS_API_KEY}`
 	);
-	console.log(res);
 
 	const data = await res.json();
+
 	if (!data) {
 		return {
 			notFound: true,
@@ -43,4 +44,4 @@ export const getServeSideProps = async ({ query: { term } }) => {
 			data: data.articles,
 		},
 	};
-};
+}
