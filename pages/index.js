@@ -13,7 +13,7 @@ export default function Home({ data }) {
 			</h1>
 
 			<div className="grid md:grid-cols-3 gap-8">
-				{data && data.map((news, i) => <NewsItem key={i} news={news} />)}
+				{data && data?.map((news, i) => <NewsItem key={i} news={news} />)}
 			</div>
 		</Layout>
 	);
