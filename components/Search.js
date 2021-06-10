@@ -23,9 +23,6 @@ export default function Search() {
 					onChange={(e) => setTerm(e.target.value)}
 					placeholder="Search news…"
 				/>
-				<button type="submit" className="absolute top-2 right-1 text-blue-100">
-					<FaSearch className="cursor-pointer" />
-				</button>
 			</form>
 		</div>
 	);

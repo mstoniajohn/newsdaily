@@ -25,13 +25,16 @@ export default function searchNews({ data }) {
 	);
 }
 
-export async function getServeSideProps({ query: { term } }) {
+export async function getServerSideProps(context) {
+	const { term } = context.query;
 	console.log(term);
 	const res = await fetch(
-		`https://newsapi.org/v2/everything?q=${term}&language=en&apiKey=${process.env.NEXT_PUBLIC_NEWS_API_KEY}`
+		`https://newsapi.org/v2/top-headlines?q=${term}&apiKey=${process.env.NEXT_PUBLIC_NEWS_API_KEY}`
 	);
+	// console.log('RES', res);
 
 	const data = await res.json();
+	// console.log(data);
 
 	if (!data) {
 		return {
